@@ -8,8 +8,13 @@ class CountriesContainer extends Component {
     this.state = {
       error: null,
       isLoaded: false, 
-      items: []
+      items: [],
+      selectedCountry: {}
     };
+  }
+
+  handleCountrySelectedSudo(submittedCountry) {
+    this.setState({submittedCountry});
   }
 
   componentDidMount() {
@@ -41,8 +46,8 @@ class CountriesContainer extends Component {
       return (
         <div>
           <p>CountriesContainer</p>
-          <CountryDetail />
-          <CountriesList data={items} />
+          <CountryDetail data={items} />
+          <CountriesList data={items} onCountrySelect={this.handleCountrySelectedSudo} />
         </div>
         // <ul>
         //   {items.map(item => (
