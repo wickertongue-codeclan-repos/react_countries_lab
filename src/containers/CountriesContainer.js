@@ -39,13 +39,18 @@ class CountriesContainer extends Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <ul>
-          {items.map(item => (
-            <li key={item.name}>
-              {item.name} {item.population}
-            </li>
-          ))}
-        </ul>
+        <div>
+          <p>CountriesContainer</p>
+          <CountryDetail />
+          <CountriesList data={items} />
+        </div>
+        // <ul>
+        //   {items.map(item => (
+        //     <li key={item.name}>
+        //       {item.name}
+        //     </li>
+        //   ))}
+        // </ul>
       );
     }
   }
