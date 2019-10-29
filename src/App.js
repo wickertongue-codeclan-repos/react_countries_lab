@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {Component} from 'react';
+import CountriesContainer from './containers/CountriesContainer';
 import './App.css';
 
-function App() {
-  return (
-    <h1>Hello!</h1>
-  );
+class App extends Component {
+  render() {
+    return <CountriesContainer />
+  }
 }
 
 export default App;
